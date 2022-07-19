@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <SHome>
       <h1>Boarb</h1>
+      <p>bip bip</p>
     </SHome>
   );
 }
