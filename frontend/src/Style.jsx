@@ -1,47 +1,32 @@
 import styled from "styled-components";
 
-export default styled.div`
-@import url('https://fonts.googleapis.com/css?family=Alata|Droid+Sans');
-//VARIABLES DEFINITION
-  --colorMain: #29abe2;
-  --colorSecond: #00c3e3;
-  --colorTextlight: white;
-  --colorTextBlue: #29abe2;
-  --colorTextDarkBlue: #515c6f;
-  --colorTextDarkGrey: #767676;
-  --colorBackgroundMain: white;
-  --colorBackgroundLightBlue: #e6fcf3;
-  --colorBackgroundLightGrey: #f3f3f3;
-  --colorBackgroundMediumGrey: #d8dadb;
+export default styled.main`
+  @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+  border: 10px solid #eaf27c;
+  height: 90vh;
 
-  
-  --fontMain: 1.5rem 'Poppins', sans-serif ;
-  --fontSecondary: 1rem 'Poppins', sans-serif ;
-  --fontTitleBold: bold 1.75rem 'Poppins', sans-serif  ;
-  --fontTitleTopic: bold 1.25rem 'Poppins', sans-serif ;
-  --fontTitleXL: 2.5rem 'Poppins', sans-serif ;
-  
-  //We redefine font size smaller for mobile
-  @media screen and (max-width: 760px) {
-    --fontMain: 1rem 'Poppins', sans-serif ;
-  --fontSecondary: 0.85rem 'Poppins', sans-serif ;
-  --fontTitleBold: bold 1.25rem 'Poppins', sans-serif  ;
-  --fontTitleTopic: rem 'Poppins', sans-serif ;
-  --fontTitleXL: 2rem 'Poppins', sans-serif ;
-  }
-  --radiusButton: 8px;
-  --radiusTopic: 22px;
-  --shadowButton: 0px 1px 5px #00000030;
-  --shadowImg: 0px 3px 20px #00000020;
-  --borderButton : 2px solid #29abe2;
-  
-  --widthButtonXL : 80vw;
-  --widthButtonL : 40vw;
-  --widthButtonM : 26vw;
-  --widthButtonS : 20vw;
-  --heightButton : 6vh;
-  --heightButtonTopic : 13vh: 
-  background-color: var( --colorBackgroundMain);
-  font: var(--fontMain);
+  background-color: #2a2c31;
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+
+  p {
+    font-family: "Comfortaa", cursive;
+    font-size: 1.125rem;
+    letter-spacing: -0.5px;
+    color: #fdfffc;
+    margin: 0.5rem;
+    padding: 0.3rem;
+  }
+
+  h1 {
+    font-family: "Poiret One", cursive;
+    font-size: 2.441rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #eaf27c;
+    padding: 1rem;
+    text-align: center;
+  }
 `;
