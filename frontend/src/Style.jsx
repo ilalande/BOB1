@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-export default styled.div`
+export default styled.main`
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+  border: 10px solid #eaf27c;
+  height: 90vh;
 
-  body {
-    background-color: #2a2c31;
-    box-sizing: border-box;
-    width: 100vw;
-  }
+  background-color: #2a2c31;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 
   p {
     font-family: "Comfortaa", cursive;
@@ -25,8 +26,7 @@ export default styled.div`
     font-weight: 800;
     text-transform: uppercase;
     color: #eaf27c;
-    margin: 1rem;
-    padding: 0.8rem;
+    padding: 1rem;
     text-align: center;
   }
 `;
