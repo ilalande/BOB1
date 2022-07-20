@@ -8,9 +8,8 @@ export default styled.div`
   display: flex;
   flex-direction: column;
 
-  input.plus {
-    width: 5vw;
-    min-width: 80px;
-    margin: auto;
+  p {
+    text-align: center;
+    font-size: 3.2rem;
   }
 `;

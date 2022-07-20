@@ -22,7 +22,7 @@ export default styled.main`
 
   h1 {
     font-family: "Poiret One", cursive;
-    font-size: 2.441rem;
+    font-size: 4rem;
     font-weight: 800;
     text-transform: uppercase;
     color: #eaf27c;
