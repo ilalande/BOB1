@@ -11,12 +11,14 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
       <Styled>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:boardName" element={<Board />} />
-          <Route path="/infos" element={<Infos />} />
-        </Routes>
-        <Menu />
+        <div className="main">
+          <Menu />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:boardName" element={<Board />} />
+            <Route path="/infos" element={<Infos />} />
+          </Routes>
+        </div>
       </Styled>
     </DndProvider>
   );
