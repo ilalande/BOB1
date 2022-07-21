@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 export default styled.div`
-  width: 40vw;
   min-width: 250px;
   margin: auto;
   padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
+
+  .head {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
 
   input.plus {
-    width: 5vw;
-    min-width: 80px;
-    margin: auto;
+    width: 3vw;
+    min-width: 70px;
+    margin: 1rem;
   }
 `;

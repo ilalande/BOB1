@@ -4,7 +4,7 @@ export default styled.div`
   width: 15vw;
   height: 30vh;
   min-width: 70px;
-  margin: auto;
+  margin-left: 2rem;
   padding-top: 2rem;
   display: flex;
   background-color: #fe7d7a;
