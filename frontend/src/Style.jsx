@@ -4,12 +4,15 @@ export default styled.main`
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
   border: 10px solid #eaf27c;
-  height: 90vh;
-
+  height: 100vh;
   background-color: #2a2c31;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+
+  .main {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+  }
 
   p {
     font-family: "Comfortaa", cursive;

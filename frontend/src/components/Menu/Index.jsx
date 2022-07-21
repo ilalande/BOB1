@@ -12,7 +12,7 @@ export default function Menu() {
             <img className="navBarBoarb" src={boarbMenu} alt="logo boarb" />
           </NavLink>
         </li>
-        <li>
+        <li className="i">
           <NavLink to="/infos">
             <img className="navBarInfo" src={infoMenu} alt="logo boarb" />
           </NavLink>
