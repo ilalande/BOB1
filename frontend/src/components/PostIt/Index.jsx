@@ -1,20 +1,23 @@
 import { useDrag } from "react-dnd";
-
+import PropTypes from "prop-types";
 import SPostIt from "./style";
 
-export default function PostIt() {
+export default function PostIt({ id, content }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "postIt",
-    item: { name: "Your post it" },
+    item: { id },
 
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
-      handlerId: monitor.getHandlerId(),
     }),
   }));
   return (
     <SPostIt ref={drag} className={isDragging && "dragging"}>
-      bip
+      {content}
     </SPostIt>
   );
 }
+PostIt.propTypes = {
+  id: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};

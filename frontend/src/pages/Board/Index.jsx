@@ -5,6 +5,18 @@ import BoardArea from "@pages/BoardArea/Index";
 import SBoard from "./style";
 import plusRose from "../../assets/Fleche_R.svg";
 
+const postItList = [
+  {
+    id: 1,
+    content: "bipbipbip",
+    color: "pink",
+  },
+  {
+    id: 2,
+    content: "bouboupbloup",
+    color: "pink",
+  },
+];
 export default function Board() {
   const { boardName } = useParams();
 
@@ -22,10 +34,17 @@ export default function Board() {
         />
       </div>
       <div className="PostItZone">
-        <PostIt />
-        <PostIt />
+        {postItList.map((postIt) => {
+          return (
+            <PostIt
+              id={postIt.id}
+              content={postIt.content}
+              color={postIt.color}
+            />
+          );
+        })}
       </div>
-      <BoardArea />
+      <BoardArea postItList={postItList} />
     </SBoard>
   );
 }

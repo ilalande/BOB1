@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.div`
   min-width: 250px;
   margin: auto;
-  padding-top: 2rem;
+  margin-top: 1rem;
 
   .head {
     display: flex;
