@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import PostIt from "@components/PostIt/Index";
+
+import BoardArea from "@pages/BoardArea/Index";
 import SBoard from "./style";
 import plusRose from "../../assets/Fleche_R.svg";
 
@@ -19,7 +21,11 @@ export default function Board() {
           onClick={addPostIt}
         />
       </div>
-      <PostIt />
+      <div className="PostItZone">
+        <PostIt />
+        <PostIt />
+      </div>
+      <BoardArea />
     </SBoard>
   );
 }

@@ -10,6 +10,9 @@ export default styled.div`
     justify-content: center;
     margin: 1rem;
   }
+  .PostItZone {
+    display: flex;
+  }
 
   input.plus {
     width: 3vw;
