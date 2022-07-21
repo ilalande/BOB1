@@ -13,4 +13,11 @@ export default styled.nav`
     max-width: 50px;
     padding-top: 1rem;
   }
+  a:hover {
+    opacity: 0.2;
+    cursor: pointer;
+  }
+  .active {
+    opacity: 0.2;
+  }
 `;
