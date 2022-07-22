@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="37mm"
+   height="34mm"
+   viewBox="0 0 37 34"
+   version="1.1"
+   id="svg1445"
+   inkscape:version="1.2 (56b05e47e7, 2022-06-09, custom)"
+   sodipodi:docname="Fleche_BC.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1447"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4039843"
+     inkscape:cx="397.44035"
+     inkscape:cy="224.00536"
+     inkscape:window-width="1920"
+     inkscape:window-height="948"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1442" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 20.440953,28.074032 h -0.79708 V 6.0801792"
+       style="font-size:40px;line-height:1.25;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';white-space:pre;fill:none;fill-opacity:1;stroke:#4fb0c6;stroke-width:2.17547;stroke-dasharray:none;stroke-opacity:1"
+       id="path354-3-7"
+       sodipodi:nodetypes="ccc" />
+    <path
+       d="m 30.096943,16.823896 v 0.797079 H 8.1030834"
+       style="font-size:40px;line-height:1.25;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';white-space:pre;fill:none;fill-opacity:1;stroke:#4fb0c6;stroke-width:2.17547;stroke-dasharray:none;stroke-opacity:1"
+       id="path354-3-6-5"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       style="fill:none;stroke:#4fb0c6;stroke-width:1.596;stroke-opacity:1"
+       id="rect532-3"
+       width="32.273842"
+       height="28.518789"
+       x="3.5069661"
+       y="3.3615861"
+       ry="6.7124901" />
+  </g>
+</svg>
