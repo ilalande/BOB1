@@ -42,8 +42,7 @@ export default function Board() {
           className="plus"
           onClick={addPostIt}
         />
-      </div>
-      <div className="PostItZone">
+
         {postItList
           .filter((postIt) => postIt.status === "draft")
           .map((postIt) => {

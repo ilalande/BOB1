@@ -8,10 +8,8 @@ export default styled.div`
   .head {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 1rem;
-  }
-  .PostItZone {
-    display: flex;
   }
 
   input.plus {
