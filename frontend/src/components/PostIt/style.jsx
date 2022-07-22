@@ -10,9 +10,15 @@ export default styled.div`
   display: flex;
   background-color: #fe7d7a;
   border-radius: 1.5rem;
-  color: #fdfffc;
-  font-family: "Comfortaa", cursive;
-  font-size: 1.125rem;
-  letter-spacing: -0.5px;
+
   padding: 0.7rem;
+  input {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    color: #fdfffc;
+    font-family: "Comfortaa", cursive;
+    font-size: 1.125rem;
+    letter-spacing: -0.5px;
+  }
 `;
