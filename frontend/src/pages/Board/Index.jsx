@@ -1,23 +1,26 @@
 import { useParams } from "react-router-dom";
 import PostIt from "@components/PostIt/Index";
-
+import { useState } from "react";
 import BoardArea from "@pages/BoardArea/Index";
 import SBoard from "./style";
 import plusRose from "../../assets/Fleche_R.svg";
 
-const postItList = [
-  {
-    id: 1,
-    content: "bipbipbip",
-    color: "pink",
-  },
-  {
-    id: 2,
-    content: "bouboupbloup",
-    color: "pink",
-  },
-];
 export default function Board() {
+  const [postItList, setPostItList] = useState([
+    {
+      id: 1,
+      content: "bipbipbip",
+      color: "pink",
+      status: "draft",
+    },
+    {
+      id: 2,
+      content: "bouboupbloup",
+      color: "pink",
+      status: "draft",
+    },
+  ]);
+
   const { boardName } = useParams();
 
   const addPostIt = () => {};
@@ -34,17 +37,20 @@ export default function Board() {
         />
       </div>
       <div className="PostItZone">
-        {postItList.map((postIt) => {
-          return (
-            <PostIt
-              id={postIt.id}
-              content={postIt.content}
-              color={postIt.color}
-            />
-          );
-        })}
+        {postItList
+          .filter((postIt) => postIt.status === "draft")
+          .map((postIt) => {
+            return (
+              <PostIt
+                key={postIt.id}
+                id={postIt.id}
+                content={postIt.content}
+                color={postIt.color}
+              />
+            );
+          })}
       </div>
-      <BoardArea postItList={postItList} />
+      <BoardArea postItList={postItList} setPostItList={setPostItList} />
     </SBoard>
   );
 }
