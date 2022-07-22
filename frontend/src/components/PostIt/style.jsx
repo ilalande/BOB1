@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export default styled.div`
   width: 15vw;
-  height: 30vh;
+  height: 15vh;
   min-width: 70px;
-  margin-left: 2rem;
+  margin: 1.3rem;
+  margin-top: 0;
   padding-top: 2rem;
   display: flex;
   background-color: #fe7d7a;
