@@ -23,7 +23,14 @@ export default function Board() {
 
   const { boardName } = useParams();
 
-  const addPostIt = () => {};
+  const addPostIt = () => {
+    const idNewPI = postItList.length + 1;
+    setPostItList(
+      postItList.concat([
+        { id: idNewPI, content: "", color: "pink", status: "draft" },
+      ])
+    );
+  };
   return (
     <SBoard>
       <div className="head">

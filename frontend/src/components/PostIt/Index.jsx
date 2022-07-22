@@ -18,6 +18,6 @@ export default function PostIt({ id, content }) {
   );
 }
 PostIt.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   content: PropTypes.string.isRequired,
 };
