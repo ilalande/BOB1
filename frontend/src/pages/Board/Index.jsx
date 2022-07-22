@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import PostIt from "@components/PostIt/Index";
 import { useState } from "react";
-import BoardArea from "@pages/BoardArea/Index";
+import BoardArea from "@components/BoardArea/Index";
 import SBoard from "./style";
 import plusRose from "../../assets/Fleche_R.svg";
 
