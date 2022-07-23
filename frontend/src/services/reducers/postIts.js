@@ -22,20 +22,24 @@ export default (state = initialState, action = {}) => {
 
     case "POSIIT_ADDCONTENT":
       const { content } = action.payload.content;
-      return [...state, { ...action.payload, content: state.content }];
+      return [...state, { ...action.payload, content: action.payload.content }];
 
     case "POSIIT_DELETE":
       return [...state, {}];
 
     case "POSIIT_CHANGESTATUS":
-      const { updatedItem } = state
-        .filter((item) => item.id === action.payload.id)
-        .map((item) => {
-          console.log(action.payload.status);
-          console.log(action.payload.id);
+      // const { updatedItem } = state
+      //   .filter((item) => item.id === action.payload.id)
+      //   .map((item) => {
+      //     return { ...item, status: action.payload.status };
+      //   });
+      const updatedItems = state.map((item) => {
+        if (item.id === action.id) {
           return { ...item, status: action.payload.status };
-        });
-      return [...state, { updatedItem }];
+        }
+        return item;
+      });
+      return updatedItems;
 
     default:
       return state;

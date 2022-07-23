@@ -14,7 +14,7 @@ export default function Board() {
   const addPostIt = () => {
     dispatch({
       type: "POSIIT_ADD",
-      payload: { color: "pink", status: "draft" },
+      payload: { color: "pink", status: "draft", board: boardName },
     });
   };
   return (

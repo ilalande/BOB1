@@ -1,15 +1,16 @@
 import { useDrop } from "react-dnd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import PostIt from "@components/PostIt/Index";
-import propTypes from "prop-types";
 import SBoardArea from "./style";
 
-export default function BoardArea({ postItList }) {
+export default function BoardArea() {
+  const postItList = useSelector((state) => state.postIts);
   const dispatch = useDispatch();
   const addPostItToBoard = (id) => {
     dispatch({
       type: "POSIIT_CHANGESTATUS",
-      payload: { id, status: "posted" },
+      id,
+      payload: { status: "posted" },
     });
   };
   // creating Drop zone
@@ -42,6 +43,3 @@ export default function BoardArea({ postItList }) {
     </SBoardArea>
   );
 }
-BoardArea.propTypes = {
-  postItList: propTypes.arrayOf(propTypes.shape()).isRequired,
-};
