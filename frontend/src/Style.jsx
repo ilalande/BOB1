@@ -4,7 +4,6 @@ export default styled.main`
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
   border: 10px solid #eaf27c;
-  height: 100vh;
   background-color: #2a2c31;
   box-sizing: border-box;
 

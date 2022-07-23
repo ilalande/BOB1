@@ -17,7 +17,23 @@ export default (state = initialState, action = {}) => {
       return updatedItemsContent;
 
     case "POSIIT_DELETE":
-      return [...state, {}];
+      const updatedItemsDelete = state.map((item) => {
+        if (item.id !== action.id) {
+          return { ...item };
+        }
+        return item;
+      });
+      return updatedItemsDelete;
+
+    // const updatedItemsDelete = state
+    //   .filter((item) => {
+    //     item.id !== action.id;
+    //     console.log(item);
+    //   })
+    //   .map((item) => {
+    //     return { ...item };
+    //   });
+    // return updatedItemsDelete;
 
     case "POSIIT_CHANGESTATUS":
       const updatedItems = state.map((item) => {

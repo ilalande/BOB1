@@ -12,6 +12,13 @@ export default function PostIt({ id, content, color }) {
       payload: { content: e.target.value },
     });
   };
+
+  const deletePI = () => {
+    dispatch({
+      type: "POSIIT_DELETE",
+      id,
+    });
+  };
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "postIt",
     item: { id },
@@ -23,6 +30,9 @@ export default function PostIt({ id, content, color }) {
   return (
     <SPostIt ref={drag} className={isDragging && "dragging"} color={color}>
       <input type="text" id={id} onChange={fillPI} value={content} />
+      <button type="button" className="cross" onClick={deletePI}>
+        X
+      </button>
     </SPostIt>
   );
 }
