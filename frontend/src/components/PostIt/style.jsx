@@ -8,9 +8,8 @@ export default styled.div`
   margin-top: 0;
   padding-top: 2rem;
   display: flex;
-  background-color: #fe7d7a;
+  background-color: ${(props) => props.color};
   border-radius: 1.5rem;
-
   padding: 0.7rem;
   input {
     text-decoration: none;

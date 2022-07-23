@@ -12,7 +12,9 @@ export default styled.div`
     margin: 1rem;
   }
 
-  input.plus {
+  input.plusRose,
+  input.plusBleuClair,
+  input.plusBleuFonce {
     width: 3vw;
     min-width: 70px;
     margin: 1rem;
