@@ -1,12 +1,16 @@
 import { useDrag } from "react-dnd";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import SPostIt from "./style";
 
 export default function PostIt({ id, content }) {
-  const [piFilled, setPiFilled] = useState(content);
+  const dispatch = useDispatch();
   const fillPI = (e) => {
-    setPiFilled(e.target.value);
+    dispatch({
+      type: "POSIIT_ADDCONTENT",
+      id,
+      payload: { content: e.target.value },
+    });
   };
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "postIt",
@@ -18,11 +22,15 @@ export default function PostIt({ id, content }) {
   }));
   return (
     <SPostIt ref={drag} className={isDragging && "dragging"}>
-      <input type="text" id={id} value={piFilled} onChange={fillPI} />
+      <input type="text" id={id} onChange={fillPI} value={content} />
     </SPostIt>
   );
 }
 PostIt.propTypes = {
   id: PropTypes.number.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.string,
+};
+
+PostIt.defaultProps = {
+  content: "",
 };
