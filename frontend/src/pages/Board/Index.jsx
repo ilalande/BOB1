@@ -30,19 +30,16 @@ export default function Board() {
         />
 
         {postItList
-          .filter((postIt) => postIt.status === "draft")
+          .filter(
+            (postIt) => postIt.status === "draft" && postIt.board === boardName
+          )
           .map((postIt) => {
             return (
-              <PostIt
-                key={postIt.id}
-                id={postIt.id}
-                content={postIt.content}
-                color={postIt.color}
-              />
+              <PostIt key={postIt.id} id={postIt.id} content={postIt.content} />
             );
           })}
       </div>
-      <BoardArea postItList={postItList} />
+      <BoardArea boardName={boardName} />
     </SBoard>
   );
 }
