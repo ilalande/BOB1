@@ -1,35 +1,21 @@
 import { useParams } from "react-router-dom";
 import PostIt from "@components/PostIt/Index";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import BoardArea from "@components/BoardArea/Index";
 import SBoard from "./style";
 import plusRose from "../../assets/Fleche_R.svg";
 
 export default function Board() {
-  const [postItList, setPostItList] = useState([
-    {
-      id: 1,
-      content: "bipbipbip",
-      color: "pink",
-      status: "draft",
-    },
-    {
-      id: 2,
-      content: "bouboupbloup",
-      color: "pink",
-      status: "draft",
-    },
-  ]);
+  const postItList = useSelector((state) => state.postIts);
 
   const { boardName } = useParams();
-
+  const dispatch = useDispatch();
   const addPostIt = () => {
-    const idNewPI = postItList.length + 1;
-    setPostItList(
-      postItList.concat([
-        { id: idNewPI, content: "", color: "pink", status: "draft" },
-      ])
-    );
+    dispatch({
+      type: "POSIIT_ADD",
+      payload: { color: "pink", status: "draft" },
+    });
   };
   return (
     <SBoard>
@@ -56,7 +42,7 @@ export default function Board() {
             );
           })}
       </div>
-      <BoardArea postItList={postItList} setPostItList={setPostItList} />
+      <BoardArea postItList={postItList} />
     </SBoard>
   );
 }
