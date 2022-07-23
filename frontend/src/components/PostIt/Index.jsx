@@ -8,7 +8,8 @@ export default function PostIt({ id, content }) {
   const fillPI = (e) => {
     dispatch({
       type: "POSIIT_ADDCONTENT",
-      payload: { id, content: e.target.value },
+      id,
+      payload: { content: e.target.value },
     });
   };
   const [{ isDragging }, drag] = useDrag(() => ({

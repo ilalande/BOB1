@@ -21,18 +21,18 @@ export default (state = initialState, action = {}) => {
       return [...state, { ...action.payload, id: state.length }];
 
     case "POSIIT_ADDCONTENT":
-      const { content } = action.payload.content;
-      return [...state, { ...action.payload, content: action.payload.content }];
+      const updatedItemsContent = state.map((item) => {
+        if (item.id === action.id) {
+          return { ...item, content: action.payload.content };
+        }
+        return item;
+      });
+      return updatedItemsContent;
 
     case "POSIIT_DELETE":
       return [...state, {}];
 
     case "POSIIT_CHANGESTATUS":
-      // const { updatedItem } = state
-      //   .filter((item) => item.id === action.payload.id)
-      //   .map((item) => {
-      //     return { ...item, status: action.payload.status };
-      //   });
       const updatedItems = state.map((item) => {
         if (item.id === action.id) {
           return { ...item, status: action.payload.status };
