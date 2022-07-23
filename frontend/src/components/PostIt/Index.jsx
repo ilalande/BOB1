@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import SPostIt from "./style";
 
-export default function PostIt({ id, content }) {
+export default function PostIt({ id, content, color }) {
   const dispatch = useDispatch();
   const fillPI = (e) => {
     dispatch({
@@ -21,7 +21,7 @@ export default function PostIt({ id, content }) {
     }),
   }));
   return (
-    <SPostIt ref={drag} className={isDragging && "dragging"}>
+    <SPostIt ref={drag} className={isDragging && "dragging"} color={color}>
       <input type="text" id={id} onChange={fillPI} value={content} />
     </SPostIt>
   );
@@ -29,6 +29,7 @@ export default function PostIt({ id, content }) {
 PostIt.propTypes = {
   id: PropTypes.number.isRequired,
   content: PropTypes.string,
+  color: PropTypes.string.isRequired,
 };
 
 PostIt.defaultProps = {
