@@ -1,17 +1,4 @@
-const initialState = [
-  {
-    id: 0,
-    content: "bip",
-    board: "test1",
-    status: "draft",
-  },
-  {
-    id: 1,
-    content: "bip2",
-    board: "test1",
-    status: "draft",
-  },
-];
+const initialState = [];
 
 /*eslint-disable */
 export default (state = initialState, action = {}) => {

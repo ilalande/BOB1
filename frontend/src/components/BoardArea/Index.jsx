@@ -1,9 +1,10 @@
 import { useDrop } from "react-dnd";
 import { useDispatch, useSelector } from "react-redux";
 import PostIt from "@components/PostIt/Index";
+import propTypes from "prop-types";
 import SBoardArea from "./style";
 
-export default function BoardArea() {
+export default function BoardArea({ boardName }) {
   const postItList = useSelector((state) => state.postIts);
   const dispatch = useDispatch();
   const addPostItToBoard = (id) => {
@@ -16,9 +17,7 @@ export default function BoardArea() {
   // creating Drop zone
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: "postIt",
-
     drop: (item) => addPostItToBoard(item.id),
-
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -28,7 +27,9 @@ export default function BoardArea() {
   return (
     <SBoardArea ref={drop} className={isActive && "active"}>
       {postItList
-        .filter((postIt) => postIt.status === "posted")
+        .filter(
+          (postIt) => postIt.status === "posted" && postIt.board === boardName
+        )
         .map((postIt) => {
           return (
             <PostIt
@@ -43,3 +44,6 @@ export default function BoardArea() {
     </SBoardArea>
   );
 }
+BoardArea.propTypes = {
+  boardName: propTypes.string.isRequired,
+};
