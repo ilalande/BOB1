@@ -11,6 +11,7 @@ export default styled.div`
   background-color: ${(props) => props.color};
   border-radius: 1.5rem;
   padding: 0.7rem;
+
   input {
     text-decoration: none;
     background: transparent;
@@ -19,5 +20,11 @@ export default styled.div`
     font-family: "Comfortaa", cursive;
     font-size: 1.125rem;
     letter-spacing: -0.5px;
+  }
+  .cross {
+    color: #fdfffc;
+    text-decoration: none;
+    background: transparent;
+    border: none;
   }
 `;

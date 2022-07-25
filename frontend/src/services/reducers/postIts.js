@@ -12,19 +12,25 @@ export default (state = initialState, action = {}) => {
         if (item.id === action.id) {
           return { ...item, content: action.payload.content };
         }
-        return item;
+        return { ...item };
       });
       return updatedItemsContent;
 
     case "POSIIT_DELETE":
-      return [...state, {}];
+      const updatedItemsDelete = state.map((item) => {
+        if (item.id !== action.id) {
+          return { ...item };
+        }
+        return { ...item };
+      });
+      return updatedItemsDelete;
 
     case "POSIIT_CHANGESTATUS":
       const updatedItems = state.map((item) => {
         if (item.id === action.id) {
           return { ...item, status: action.payload.status };
         }
-        return item;
+        return { ...item };
       });
       return updatedItems;
 
