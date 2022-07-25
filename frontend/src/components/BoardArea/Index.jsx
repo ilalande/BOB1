@@ -1,24 +1,23 @@
 import { useDrop } from "react-dnd";
+import { useDispatch, useSelector } from "react-redux";
 import PostIt from "@components/PostIt/Index";
 import propTypes from "prop-types";
 import SBoardArea from "./style";
 
-export default function BoardArea({ postItList, setPostItList }) {
-  // creating the list of post its displayed in the zone
-
+export default function BoardArea({ boardName }) {
+  const postItList = useSelector((state) => state.postIts);
+  const dispatch = useDispatch();
   const addPostItToBoard = (id) => {
-    const postItAdded = postItList.filter((postIt) => id === postIt.id);
-    postItAdded[0].status = "posted";
-    setPostItList(
-      postItList.filter((postIt) => postIt.id !== id).concat(postItAdded[0])
-    );
+    dispatch({
+      type: "POSIIT_CHANGESTATUS",
+      id,
+      payload: { status: "posted" },
+    });
   };
   // creating Drop zone
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: "postIt",
-
     drop: (item) => addPostItToBoard(item.id),
-
     collect: (monitor) => ({
       isOver: monitor.isOver(),
     }),
@@ -28,7 +27,9 @@ export default function BoardArea({ postItList, setPostItList }) {
   return (
     <SBoardArea ref={drop} className={isActive && "active"}>
       {postItList
-        .filter((postIt) => postIt.status === "posted")
+        .filter(
+          (postIt) => postIt.status === "posted" && postIt.board === boardName
+        )
         .map((postIt) => {
           return (
             <PostIt
@@ -44,6 +45,5 @@ export default function BoardArea({ postItList, setPostItList }) {
   );
 }
 BoardArea.propTypes = {
-  postItList: propTypes.arrayOf(propTypes.shape()).isRequired,
-  setPostItList: propTypes.func.isRequired,
+  boardName: propTypes.string.isRequired,
 };
