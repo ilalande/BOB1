@@ -9,7 +9,14 @@ export default styled.div`
   flex-direction: column;
 
   p {
-    text-align: center;
-    font-size: 3.2rem;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+  a {
+    color: #eaf27c;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #5e48d7;
   }
 `;

@@ -9,7 +9,7 @@
 
 ## Informations générales
 
-Cette WebApp est un un tableau personnel permettant d'ajouter des tâches pense-bête sous forme de posts-its.
+Cette WebApp est un tableau personnel permettant d'ajouter des tâches pense-bête sous forme de posts-its.
 Il a été développé dans le cadre du CheckPoint 4 de la formation développeur Javascript de la Wild Code School de juin 2022 par [Juliane Casier](https://www.linkedin.com/in/juliane-casier-bb642832/)
 
 ### Statut du projet et état d'avancement
